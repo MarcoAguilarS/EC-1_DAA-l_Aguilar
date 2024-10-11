@@ -35,10 +35,26 @@
         android:layout_height="wrap_content"
         android:text="Calcular Mayor" />
 
+    <Button
+        android:id="@+id/calcularCuadradoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a Calcular Cuadrado"
+        android:layout_marginTop="16dp" />
+
     <TextView
         android:id="@+id/resultadoTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="16sp" />
+    <Button
+        android:id="@+id/abrirMatriculaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Matrícula"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        />
+
 </LinearLayout>

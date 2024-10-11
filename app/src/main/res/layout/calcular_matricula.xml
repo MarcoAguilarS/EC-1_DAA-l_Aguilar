@@ -5,11 +5,18 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <EditText
+        android:id="@+id/materiasEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el número de materias"
+        android:inputType="number" />
+
     <Button
         android:id="@+id/calcularButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular Cuadrado y Mitad" />
+        android:text="Calcular Matrícula" />
 
     <TextView
         android:id="@+id/resultadoTextView"
@@ -17,11 +24,4 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/volverButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volver a Calcular Mayor"
-        android:layout_marginTop="16dp" />
 </LinearLayout>

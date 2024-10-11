@@ -1,5 +1,6 @@
 package com.example.ec_1_daa_l_aguilar
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -13,6 +14,7 @@ class CalcularElCuadrado : AppCompatActivity() {
 
         val resultadoTextView = findViewById<TextView>(R.id.resultadoTextView)
         val calcularButton = findViewById<Button>(R.id.calcularButton)
+        val volverButton = findViewById<Button>(R.id.volverButton)
 
         calcularButton.setOnClickListener {
             // Calcula el cuadrado y la mitad de los números entre 15 y 70
@@ -27,6 +29,13 @@ class CalcularElCuadrado : AppCompatActivity() {
 
             // Muestra los resultados en el TextView
             resultadoTextView.text = resultados.toString()
+        }
+
+        volverButton.setOnClickListener {
+            // Regresa a CalcularMayor
+            val intent = Intent(this, CalcularMayor::class.java)
+            startActivity(intent)
+            finish() // Opcional, para cerrar CalcularElCuadrado
         }
     }
 }

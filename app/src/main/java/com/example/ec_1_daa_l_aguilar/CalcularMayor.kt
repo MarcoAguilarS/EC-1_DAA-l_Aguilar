@@ -1,5 +1,6 @@
 package com.example.ec_1_daa_l_aguilar
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -20,17 +21,22 @@ class CalcularMayor : AppCompatActivity() {
         val resultadoTextView = findViewById<TextView>(R.id.resultadoTextView)
 
         calcularButton.setOnClickListener {
-            // Obtiene los valores de los campos de texto
             val num1 = numero1EditText.text.toString().toIntOrNull() ?: 0
             val num2 = numero2EditText.text.toString().toIntOrNull() ?: 0
             val num3 = numero3EditText.text.toString().toIntOrNull() ?: 0
             val num4 = numero4EditText.text.toString().toIntOrNull() ?: 0
 
-            // Calcula el mayor número
             val mayor = maxOf(num1, num2, num3, num4)
-
-            // Muestra el resultado
             resultadoTextView.text = "El número mayor es: $mayor"
+        }
+
+        // Botón para abrir la actividad de calcular matrícula
+        val abrirMatriculaButton = findViewById<Button>(R.id.abrirMatriculaButton)
+        abrirMatriculaButton.setOnClickListener {
+            // Crear un Intent para abrir CalcularMatricula
+            val intent = Intent(this, CalcularMatricula::class.java)
+            startActivity(intent) // Iniciar la nueva actividad
         }
     }
 }
+
