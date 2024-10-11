@@ -17,7 +17,7 @@ class CalcularElCuadrado : AppCompatActivity() {
         val volverButton = findViewById<Button>(R.id.volverButton)
 
         calcularButton.setOnClickListener {
-            // Calcula el cuadrado y la mitad de los números entre 15 y 70
+
             val numeros = (15..70).toList()
             val resultados = StringBuilder()
 
@@ -27,15 +27,15 @@ class CalcularElCuadrado : AppCompatActivity() {
                 resultados.append("Número: $numero, Cuadrado: $cuadrado, Mitad: $mitad\n")
             }
 
-            // Muestra los resultados en el TextView
+
             resultadoTextView.text = resultados.toString()
         }
 
         volverButton.setOnClickListener {
-            // Regresa a CalcularMayor
+
             val intent = Intent(this, CalcularMayor::class.java)
             startActivity(intent)
-            finish() // Opcional, para cerrar CalcularElCuadrado
+            finish()
         }
     }
 }

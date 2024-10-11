@@ -30,13 +30,24 @@ class CalcularMayor : AppCompatActivity() {
             resultadoTextView.text = "El número mayor es: $mayor"
         }
 
-        // Botón para abrir la actividad de calcular matrícula
+
         val abrirMatriculaButton = findViewById<Button>(R.id.abrirMatriculaButton)
         abrirMatriculaButton.setOnClickListener {
-            // Crear un Intent para abrir CalcularMatricula
+
             val intent = Intent(this, CalcularMatricula::class.java)
             startActivity(intent) // Iniciar la nueva actividad
         }
+        val abrirUtilidadesButton = findViewById<Button>(R.id.abrirUtilidadesButton)
+        abrirUtilidadesButton.setOnClickListener {
+            val intent = Intent(this, CalcularUtilidades::class.java)
+            startActivity(intent)
+        }
+        val abrirCalcularCuadradoButton = findViewById<Button>(R.id.abrirCalcularCuadradoButton)
+        abrirCalcularCuadradoButton.setOnClickListener {
+            val intent = Intent(this, CalcularElCuadrado::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
